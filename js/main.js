@@ -454,7 +454,7 @@ $(document).ready(function() {
       .database()
       .ref("/COMMENT")
       .remove();
-  }
+  });
 
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
@@ -466,7 +466,7 @@ $(document).ready(function() {
         $("#teacher_comment").attr("disabled", true);
       }
     });
-  }
+  });
 
   //------------張育瑞-------------//
 
