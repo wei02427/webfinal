@@ -601,6 +601,7 @@ $("#clearproject").click(function() {
             var comment = childSnapshot.val().projectgoal.comment;
             var git = childSnapshot.val().projectgoal.git;
             var projectName = childSnapshot.val().projectgoal.projectName;
+            alert("in all team");
             if (
               class2 != "" &&
               arefVideo != "" &&
@@ -608,6 +609,7 @@ $("#clearproject").click(function() {
               projectName != "" &&
               git != ""
             ) {
+              alert(projectName);
               var $row = $("#class-row");
               var $newBoad = $("<div></div>");
               $newBoad.addClass("shadow-lg");
