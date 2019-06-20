@@ -437,7 +437,7 @@ $(document).ready(function() {
         teacher_commentElement.value = data;
       });
   }
-  function storedata() {
+   $("#modify").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     var comment = commentElement.value;
     firebase
@@ -447,7 +447,7 @@ $(document).ready(function() {
         comment: comment
       });
   }
-  function deletedata() {
+   $("#clear").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     commentElement.value = "";
     firebase
