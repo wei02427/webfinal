@@ -363,15 +363,16 @@ $("#clearproject").click(function() {
    alert("已清除");
   });
     $("#a").click(function() {
-        alert("已清除");
-    /*var commentElement = document.getElementById("teacher_comment");
+      
+    var commentElement = document.getElementById("teacher_comment");
     var comment = commentElement.value;
     firebase
       .database()
       .ref("COMMENT/")
       .set({
         comment: comment
-      });*/
+      });
+        alert("成功");
   });
  $("#b").click(function() {
     var commentElement = document.getElementById("teacher_comment");
