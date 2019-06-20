@@ -362,7 +362,24 @@ $("#clearproject").click(function() {
     .remove();
    alert("已清除");
   });
-  
+    $("#a").click(function() {
+    var commentElement = document.getElementById("teacher_comment");
+    var comment = commentElement.value;
+    firebase
+      .database()
+      .ref("COMMENT/")
+      .set({
+        comment: comment
+      });
+  });
+ $("#b").click(function() {
+    var commentElement = document.getElementById("teacher_comment");
+    commentElement.value = "";
+    firebase
+      .database()
+      .ref("/COMMENT")
+      .remove();
+  });
   //---------------------------------------------------------------------------
 
   //--------------------------改頭貼------------------------------------------------
@@ -480,24 +497,6 @@ $("#clearproject").click(function() {
         teacher_commentElement.value = data;
       });
   }
-  $("#a").click(function() {
-    var commentElement = document.getElementById("teacher_comment");
-    var comment = commentElement.value;
-    firebase
-      .database()
-      .ref("COMMENT/")
-      .set({
-        comment: comment
-      });
-  });
- $("#b").click(function() {
-    var commentElement = document.getElementById("teacher_comment");
-    commentElement.value = "";
-    firebase
-      .database()
-      .ref("/COMMENT")
-      .remove();
-  });
 
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
