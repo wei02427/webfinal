@@ -36,9 +36,6 @@
   font-weight: 700;
 }
 @media (min-width: 480px) {
-  .rwd-table td:before {
-    display: none;
-  }
   .rwd-table td,
   .rwd-table th {
     display: table-cell;
