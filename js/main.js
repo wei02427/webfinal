@@ -539,7 +539,7 @@ $("#clearproject").click(function() {
     var name;
     $("#messageInput").keypress(function(e) {
       console.log("press");
-      if (e.keyCode == 13 && $messageField.val()!='') {
+      if (e.keyCode == 13 && $messageField.val()!='' && $messageField.val()!=' ') {
         loginUser = firebase.auth().currentUser;
         firebase
           .database()
