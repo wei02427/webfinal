@@ -375,12 +375,13 @@ $("#clearproject").click(function() {
         alert("成功");
   });
  $("#b").click(function() {
-    var commentElement = document.getElementById("teacher_comment");
+  /*  var commentElement = document.getElementById("teacher_comment");
     commentElement.value = "";
     firebase
       .database()
       .ref("/COMMENT")
-      .remove();
+      .remove();*/
+     alert("已清除");
   });
   //---------------------------------------------------------------------------
 
