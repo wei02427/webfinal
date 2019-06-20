@@ -495,6 +495,7 @@ $("#clearproject").click(function() {
         var teacher_
         = document.getElementById("teacher_comment");
         var data = snapshot.val();
+        alert(data);
         teacher_commentElement.value = data;
       });
   }
