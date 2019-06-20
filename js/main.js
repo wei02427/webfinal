@@ -498,6 +498,7 @@ $("#clearproject").click(function() {
         alert(data);
          $("#comm")
             .html(data)
+            .css("color","red");
           
         teacher_commentElement.value = data;
       });
