@@ -217,8 +217,6 @@ $(document).ready(function() {
       all_team();
       getprojectgoal();
       getcontent();
-      storedata();
-      deletedata();
       checkID();
     }
   });
