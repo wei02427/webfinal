@@ -346,7 +346,6 @@ $(document).ready(function() {
     alert("已儲存");
   });
 $("#clearproject").click(function() {
- alert("已清除");
   var nameElement = document.getElementById("projectName");
   nameElement.value = "";
   var arefElement = document.getElementById("arefVideo");
@@ -361,6 +360,7 @@ $("#clearproject").click(function() {
     .database()
     .ref("users/" + firebase.auth().currentUser.uid + "/projectgoal")
     .remove();
+   alert("已清除");
   });
   
   //---------------------------------------------------------------------------
