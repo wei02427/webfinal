@@ -210,11 +210,13 @@ $(document).ready(function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       if (location.pathname == "/webfinal/html/progress.html") refreshProgress();
-      console.log("test");
+      console.log("in refresh");
+      all_team();
+      console.log("after allteeam");
       getId();
       getPhoto();
       chat();
-      all_team();
+      
       getprojectgoal();
       getcontent();
       checkID();
