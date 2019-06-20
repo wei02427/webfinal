@@ -576,9 +576,11 @@ $("#clearproject").click(function() {
         );
       else
         $(".messesge").append(
-          '<div class=" justify-content-end row p-2"><span class=" bg-primary p-2 rounded text-light">' +
+          '<div class=" justify-content-end row p-2"><span class="me bg-primary p-2 rounded text-light">' +
             message +
             "</span></div>"
+          var w =document.getElementsByClassName('me').offsetWidth;
+      alert(w);
         );
       $(".card-body").scrollTop($(".card-body")[0].scrollHeight);
     });
