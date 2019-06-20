@@ -209,7 +209,7 @@ $(document).ready(function() {
   //----------------如果網頁第一次要載入值 寫在這裡----------------------
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      if (location.pathname == "/webfinal/html/progress.html") refreshProgress();
+      if (location.pathname == "/html/progress.html") refreshProgress();
       console.log("test");
       getId();
       getPhoto();
@@ -267,8 +267,7 @@ $(document).ready(function() {
       .then(function(url) {
         document.getElementById("photo").style.cssText =
           "background-image:url( " + url + ");";
-      //alert(location.pathname);
-        if (location.pathname == "/webfinal/html/setting.html")
+        if (location.pathname == "/html/setting.html")
           document.getElementById("upload_img").style.cssText =
             "background-image:url( " + url + ");";
       })
@@ -371,7 +370,6 @@ $(document).ready(function() {
       function() {
         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
           console.log("File available at", downloadURL);
-       
           document.getElementById("photo").style.cssText =
             "background-image:url( " + downloadURL + ");";
         });
@@ -437,7 +435,7 @@ $(document).ready(function() {
         teacher_commentElement.value = data;
       });
   }
- /*  $("#modify").click(function() {
+  function storedata() {
     var commentElement = document.getElementById("teacher_comment");
     var comment = commentElement.value;
     firebase
@@ -447,14 +445,14 @@ $(document).ready(function() {
         comment: comment
       });
   }
-   $("#clear").click(function() {
+  function deletedata() {
     var commentElement = document.getElementById("teacher_comment");
     commentElement.value = "";
     firebase
       .database()
       .ref("/COMMENT")
       .remove();
-  });*/
+  }
 
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
@@ -466,7 +464,7 @@ $(document).ready(function() {
         $("#teacher_comment").attr("disabled", true);
       }
     });
-  });
+  }
 
   //------------張育瑞-------------//
 
