@@ -480,7 +480,7 @@ $("#clearproject").click(function() {
         teacher_commentElement.value = data;
       });
   }
-  $("#modify").click(function() {
+  $("#a").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     var comment = commentElement.value;
     firebase
@@ -490,7 +490,7 @@ $("#clearproject").click(function() {
         comment: comment
       });
   });
- $("#clear").click(function() {
+ $("#b").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     commentElement.value = "";
     firebase
