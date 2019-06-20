@@ -437,7 +437,7 @@ $(document).ready(function() {
         teacher_commentElement.value = data;
       });
   }
-   $("#modify").click(function() {
+ /*  $("#modify").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     var comment = commentElement.value;
     firebase
@@ -454,7 +454,7 @@ $(document).ready(function() {
       .database()
       .ref("/COMMENT")
       .remove();
-  });
+  });*/
 
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
