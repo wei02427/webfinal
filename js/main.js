@@ -495,10 +495,15 @@ $("#clearproject").click(function() {
         var teacher_
         = document.getElementById("teacher_comment");
         var data = snapshot.val();
-        alert(data);
-         $("#comm")
+        if (adminUID == firebase.auth().currentUser.uid) {
+        $("#comm").css("display", "none");
+        }
+      else{
+      $("#comm")
             .html(data)
-            .css("color","red");
+            .css("color","black");
+      }
+         
           
         teacher_commentElement.value = data;
       });
