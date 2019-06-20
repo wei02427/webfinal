@@ -370,7 +370,7 @@ $(document).ready(function() {
       function() {
         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
           console.log("File available at", downloadURL);
-           alert('更新成功');
+       
           document.getElementById("photo").style.cssText =
             "background-image:url( " + downloadURL + ");";
         });
