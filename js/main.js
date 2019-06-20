@@ -500,7 +500,7 @@ $("#clearproject").click(function() {
         }
       else{
       $("#comm")
-            .html(data)
+            .html(snapshot.val())
             .css("color","black");
       }
          
