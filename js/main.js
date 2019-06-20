@@ -506,8 +506,8 @@ $("#clearproject").click(function() {
     firebase.auth().onAuthStateChanged(function(user) {
       // alert(firebase.auth().currentUser.uid);
       if (adminUID != firebase.auth().currentUser.uid) {
-        $("#storebtn").addClass("comment_btdisplay");
-        $("#deletebtn").addClass("comment_btdisplay");
+        $("#a").addClass("comment_btdisplay");
+        $("#b").addClass("comment_btdisplay");
         $("#teacher_comment").attr("disabled", true);
       }
     });
