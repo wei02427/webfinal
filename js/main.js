@@ -512,6 +512,9 @@ $("#clearproject").click(function() {
         $("#b").addClass("comment_btdisplay");
         $("#teacher_comment").css("display", "none");
       }
+      if (adminUID == firebase.auth().currentUser.uid) {
+        $("#comm").css("display", "none");
+      }
     });
   }
 
