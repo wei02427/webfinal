@@ -430,12 +430,13 @@ $(document).ready(function() {
       .database()
       .ref("COMMENT/comment")
       .once("value", function(snapshot) {
-        var teacher_commentElement = document.getElementById("teacher_comment");
+        var teacher_
+        = document.getElementById("teacher_comment");
         var data = snapshot.val();
         teacher_commentElement.value = data;
       });
   }
-  function storedata() {
+  $("#modify").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     var comment = commentElement.value;
     firebase
@@ -444,15 +445,15 @@ $(document).ready(function() {
       .set({
         comment: comment
       });
-  }
-  function deletedata() {
+  });
+ $("#clear").click(function() {
     var commentElement = document.getElementById("teacher_comment");
     commentElement.value = "";
     firebase
       .database()
       .ref("/COMMENT")
       .remove();
-  }
+  });
 
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
