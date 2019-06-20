@@ -209,7 +209,7 @@ $(document).ready(function() {
   //----------------如果網頁第一次要載入值 寫在這裡----------------------
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      if (location.pathname == "webfinal/html/progress.html") refreshProgress();
+      if (location.pathname == "/webfinal/html/progress.html") refreshProgress();
       console.log("test");
       getId();
       getPhoto();
@@ -267,7 +267,7 @@ $(document).ready(function() {
       .then(function(url) {
         document.getElementById("photo").style.cssText =
           "background-image:url( " + url + ");";
-        if (location.pathname == "webfinal/html/setting.html")
+        if (location.pathname == "/webfinal/html/setting.html")
           document.getElementById("upload_img").style.cssText =
             "background-image:url( " + url + ");";
       })
