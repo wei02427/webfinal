@@ -267,6 +267,7 @@ $(document).ready(function() {
       .then(function(url) {
         document.getElementById("photo").style.cssText =
           "background-image:url( " + url + ");";
+      alert(location.pathname);
         if (location.pathname == "/html/setting.html")
           document.getElementById("upload_img").style.cssText =
             "background-image:url( " + url + ");";
