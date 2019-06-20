@@ -579,9 +579,9 @@ $("#clearproject").click(function() {
           '<div class=" justify-content-end row p-2"><span class="me bg-primary p-2 rounded text-light">' +
             message +
             "</span></div>"
-          var w =document.getElementsByClassName('me').offsetWidth;
-      alert(w);
         );
+            var w =document.getElementsByClassName('me').offsetWidth;
+      alert(w);
       $(".card-body").scrollTop($(".card-body")[0].scrollHeight);
     });
   }
