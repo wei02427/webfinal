@@ -73,16 +73,7 @@ $(document).ready(function() {
         loginUser = firebase.auth().currentUser;
         console.log("登入使用者為", loginUser.email);
         uid = loginUser.uid;
-        firebase
-          .database()
-          .ref("users/" + loginUser.uid + "/projectgoal")
-          .set({
-            arefVideo: "",
-            class: "",
-            git: "",
-            projectName: "",
-            comment: ""
-          });
+   
         firebase
           .database()
           .ref("users/" + loginUser.uid)
@@ -93,6 +84,17 @@ $(document).ready(function() {
           })
           .then(function() {
             window.location.href = "./html/progress.html";
+          });
+      
+           firebase
+          .database()
+          .ref("users/" + loginUser.uid + "/projectgoal")
+          .set({
+            arefVideo: "",
+            class: "",
+            git: "",
+            projectName: "",
+            comment: ""
           });
       })
       .catch(function(error) {
