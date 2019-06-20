@@ -579,8 +579,7 @@ $("#clearproject").click(function() {
             message +
             "</span></div>"
         );
-            var w =document.getElementsByClassName('me').offsetWidth;
-            alert(w);
+  
       }
       $(".card-body").scrollTop($(".card-body")[0].scrollHeight);
     });
