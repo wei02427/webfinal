@@ -496,6 +496,9 @@ $("#clearproject").click(function() {
         = document.getElementById("teacher_comment");
         var data = snapshot.val();
         alert(data);
+         $("#comm")
+            .html(data)
+          
         teacher_commentElement.value = data;
       });
   }
@@ -506,7 +509,7 @@ $("#clearproject").click(function() {
       if (adminUID != firebase.auth().currentUser.uid) {
         $("#a").addClass("comment_btdisplay");
         $("#b").addClass("comment_btdisplay");
-        $("#teacher_comment").attr("disabled", true);
+        $("#teacher_comment").css("display", "none");
       }
     });
   }
