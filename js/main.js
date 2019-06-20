@@ -323,7 +323,7 @@ $(document).ready(function() {
   
    $("#modifyproject").click(function() {
    alert("已儲存");
-  var nameElement = document.getElementById("projectName");
+  /*var nameElement = document.getElementById("projectName");
   var name = nameElement.value;
   var arefElement = document.getElementById("arefVideo");
   var aref = arefElement.value;
@@ -342,7 +342,7 @@ $(document).ready(function() {
       class: cls,
       comment: comment,
       git: git
-    });
+    });*/
   });
 $("#clearproject").click(function() {
  alert("已清除");
