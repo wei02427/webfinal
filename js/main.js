@@ -553,8 +553,7 @@ $("#clearproject").click(function() {
             $messageField.val("");
           });
 
-        console.log(name);
-        console.log(message);
+        
       }
     });
 
@@ -574,7 +573,7 @@ $("#clearproject").click(function() {
             message +
             "</span></div>"
         );
-      else
+      else{
         $(".messesge").append(
           '<div class=" justify-content-end row p-2"><span class="me bg-primary p-2 rounded text-light">' +
             message +
@@ -582,6 +581,7 @@ $("#clearproject").click(function() {
         );
             var w =document.getElementsByClassName('me').offsetWidth;
       alert(w);
+      }
       $(".card-body").scrollTop($(".card-body")[0].scrollHeight);
     });
   }
