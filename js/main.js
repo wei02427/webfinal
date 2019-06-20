@@ -504,7 +504,7 @@ $("#clearproject").click(function() {
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
     firebase.auth().onAuthStateChanged(function(user) {
-     / alert("fuck");
+      alert("fuck");
       if (adminUID != firebase.auth().currentUser.uid) {
         $("#a").addClass("comment_btdisplay");
         $("#b").addClass("comment_btdisplay");
